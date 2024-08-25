@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectpagina - Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand" id="brand">
+                <h1>Portfolio.</h1>
+            </div>
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Terug
+            </a>
+        </div>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                line-height: 1.6;
+                color: #ddd;
+                background-color: #0f0e0e;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            header {
+                background: #fff;
+                color: #333;
+                padding: 1rem 0;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            header .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .brand h1 {
+                margin: 0;
+                font-size: 2rem;
+                letter-spacing: 2px;
+                color: #32cd32;
+            }
+
+            section {
+                padding: 5rem 0;
+                margin-top: 60px;
+            }
+
+            #home {
+                color: white;
+                text-align: center;
+                height: 50vh;
+                margin-top: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #home h1 {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #ffffff;
+            }
+
+            #home p {
+                font-size: 1.2rem;
+            }
+
+            #project {
+                background-color: #ffffff;
+                color: #333;
+            }
+
+            .project-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            #move {
+                margin-top: -50px;
+            }
+
+            h2 {
+                font-size: 2rem;
+                color: #32cd32;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                margin: 1rem 0;
+                padding: 0;
+                list-style: disc;
+                margin-left: 2rem;
+            }
+
+            ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .image {
+                text-align: center;
+                margin: 2rem 0;
+            }
+
+            .image img {
+                max-width: 100%;
+                height: auto;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+            }
+
+            .image iframe {
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+            }
+
+            footer {
+                background: #fff;
+                color: #333;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+
+            footer .contact {
+                margin-bottom: 1rem;
+            }
+
+            footer p {
+                margin: 0;
+            }
+
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: bold;
+                color: #ffffff;
+                background-color: #32cd32;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            .back-button:hover {
+                background-color: #ffffff;
+                color: #32cd32;
+            }
+
+            .back-button i {
+                margin-right: 0.5rem;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2rem 0; /* Verhoog indien nodig */
+            }
+
+            .github-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #32cd32;
+                font-weight: bold;
+                color: #ffffff;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            .github-button:hover {
+                background-color: #ffffff;
+                color: #32cd32;
+            }
+
+            .github-button i {
+                margin-right: 0.5rem;
+            }
+
+            #designproces {
+                margin-top: -100px;
+                margin-bottom: -100px;
+            }
+        </style>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h1>Todo applicatie</h1>
+            <p>wireframes, prototype, live product</p>
+        </div>
+    </section>
+
+    <section id="project">
+        <div class="container project-content">
+            <section id="move">
+                <p><strong>Opdracht:</strong> De opdracht was om een todo-applicatie te ontwikkelen waarmee studenten hun deadlines voor schoolopdrachten kunnen beheren. De applicatie moest gebruikers in staat stellen om todo-lijsten aan te maken, taken toe te voegen, taken te markeren als 'done' of 'not done', comments toe te voegen bij taken en bestanden te uploaden.</p>
+            
+                <p><strong>Wat is gedaan:</strong> Voor deze opdracht is een webapplicatie ontwikkeld die alle bovengenoemde functionaliteiten biedt. Studenten kunnen eenvoudig todo-lijsten aanmaken en beheren, taken toevoegen aan deze lijsten, de status van taken bijwerken, opmerkingen toevoegen en bestanden uploaden. De applicatie is gebouwd met PHP voor server-side verwerking, HTML voor de structuur, JavaScript voor interactie en CSS voor de opmaak.</p>
+            </section>
+
+            <h2>Designproces voor Todo applicatie</h2>
+            <section id="move">
+                <div class="image" id="designproces">
+                    <img src="images/Designproces.png" alt="Schets van het concept">
+                </div>
+            </section>
+
+            <h2>1. Empathize (Empathie)</h2>
+            <section id="move">
+                <p><strong>Context en Motivatie:</strong> Studenten hebben vaak behoefte aan een effectieve manier om hun taken en deadlines bij te houden. Een goed ontworpen todo-applicatie helpt hen om georganiseerd te blijven en voorkomt dat taken vergeten worden. Het ontwerp van de applicatie is gericht op gebruiksvriendelijkheid en toegankelijkheid, zodat studenten gemakkelijk hun taken kunnen beheren en prioriteiten kunnen stellen.</p>
+            </section>
+            
+            <h2>2. Define (Definiëren)</h2>
+            <section id="move">
+                <p><strong>Probleemstelling:</strong> Het doel was om een gebruiksvriendelijke todo-applicatie te creëren die studenten helpt bij het organiseren van hun schoolopdrachten. De applicatie moest verschillende functionaliteiten bevatten zoals het aanmaken van todo-lijsten, toevoegen van taken, markeren van de status van taken, toevoegen van opmerkingen en het uploaden van bestanden. Het ontwerp moet zowel functioneel als visueel aantrekkelijk zijn.</p>
+                <p><strong>Projectdoelen:</strong></p>
+                <ul>
+                    <li>Gebruiksvriendelijkheid: De interface is ontworpen om intuïtief en eenvoudig te navigeren. Studenten moeten gemakkelijk lijsten en taken kunnen aanmaken, en hun status kunnen bijwerken.</li>
+                    <li>Functionaliteit: De applicatie biedt alle benodigde functies, zoals het toevoegen van opmerkingen en het uploaden van bestanden, om een complete todo-beheerervaring te bieden.</li>
+                </ul>
+                <div class="image">
+                    <img src="images/Flowchart todo.png" alt="Flowchart van de kernvereisten">
+                    <p>Flowchart todo applicatie</p>
+                </div>
+            </section>
+            
+            <h2>3. Ideate (Ideeën Genereren)</h2>
+            <section id="move">
+                <p><strong>Conceptontwikkeling:</strong> Verschillende benaderingen zijn onderzocht voor de implementatie van de taken en lijsten, zoals de manier waarop taken kunnen worden gemarkeerd en de manier waarop bestanden kunnen worden toegevoegd. Het idee was om een overzichtelijke en efficiënte interface te creëren die de gebruikerservaring verbetert.</p>
+            </section>
+            
+            <h2>4. Prototype</h2>
+            <section id="move">
+                <p><strong>Prototype:</strong> De todo-applicatie is uitgewerkt in een prototype waarin de belangrijkste functionaliteiten en interacties tot leven komen. Het prototype omvat de mogelijkheid om todo-lijsten aan te maken, taken toe te voegen, de status van taken bij te werken, opmerkingen toe te voegen en bestanden te uploaden. Dit prototype is ontwikkeld met HTML, CSS en JavaScript om te testen hoe de applicatie functioneert in een digitale omgeving en om de gebruiksvriendelijkheid en functionaliteit te beoordelen.</p>
+                <div class="image">
+                    <img src="images/todo login.png" alt="Prototype van de todo-applicatie">
+                    <p>Prototype login scherm</p>
+                </div>
+                <div class="image">
+                    <img src="images/todo register.png" alt="Prototype van de todo-applicatie">
+                    <p>Prototype registratie scherm</p>
+                </div>
+                <div class="image">
+                    <img src="images/todo dashboard.png" alt="Prototype van de todo-applicatie">
+                    <p>Prototype dashboard scherm</p>
+                </div>
+            </section>
+            
+            <h2>5. Test</h2>
+            <section id="move">
+                <p><strong>Usability Testing:</strong> De applicatie is getest door verschillende gebruikers om te beoordelen hoe zij omgaan met de functies voor het toevoegen van taken, opmerkingen en bestanden. Feedback werd verzameld om de gebruiksvriendelijkheid te verbeteren.</p>
+                <p><strong>Functionele Testen:</strong> De applicatie is getest op verschillende apparaten en browsers om te garanderen dat alle functionaliteiten correct werken en de gebruikerservaring consistent is. Er is gecontroleerd of alle interacties goed functioneren en of de bestandsuploads probleemloos verlopen.</p>
+                <div class="image">
+                    <div class="button-container">
+                        <a href="https://www.little-sun.be/login.php" class="github-button">
+                            <i></i> Go to todo app! Live product!
+                        </a>
+                    </div>
+                </div>            
+
+                <div class="button-container">
+                    <a href="https://github.com/AndresCochez/Projects-portfolio/tree/main/Todo%20applicatie" class="github-button">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>Telefoonnummer: +32 491 10 56 86</p>
+                <p>Email: andres.cochez@hotmail.com</p>
+            </div>
+            <p>&copy; 2024 Andres Cochez</p>
+        </div>
+    </footer>
+</body>
+</html>
