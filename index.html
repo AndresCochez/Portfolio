@@ -49,12 +49,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo-andres.png">
+
+
+
+    <style>
+        #portfolio {
+            background-color: #0e0e0e;
+            padding: 2rem 0;
+        }
+    
+        .portfolio-item {
+            background-color: #151515;
+            padding: 2rem;
+            margin: 0.4rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            width: calc(28% - 2rem);
+            transition: transform 0.3s;
+        }
+    
+        .portfolio-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+    
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+    
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+    
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        .call-to-action {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .call-to-action p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #9fbbe8;
+            padding: 0.5rem 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        .btn:hover {
+            background-color: #ffffff;
+            color: #9fbbe8;
+        }
+    
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .portfolio-item {
+                width: 80%;
+                margin: 1rem 0;
+                padding: 1.5rem;
+            }
+    
+            .container {
+                width: 90%;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .portfolio-item {
+                padding: 1rem;
+            }
+    
+            .portfolio-item img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>    
 </head>
 <body>
     <header>
         <div class="container">
             <div class="brand" id="brand">
-                <h1>ANDRES</h1>
+                <a href="index.html"><h1>ANDRES</h1></a>
             </div>
             <nav>
                 <div class="menu-icon">
@@ -62,8 +163,8 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#brand">Home</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,45 +175,55 @@
             <h1>Welkom op mijn Portfolio</h1>
             <h2>Graphic Designer & Web Developer</h2>
             <p>Hey, mijn naam is Andres en neem gerust een kijkje doorheen mijn portfolio!</p>
-            <i class="fa fa-arrow-down arrow-down" aria-hidden="true"></i>
+            <br>
+            <a href="#portfolio"><i class="fa fa-arrow-down arrow-down" aria-hidden="true"></i></a>
         </div>
     </section>
 
     <section id="tiles">
         <div class="tech-tiles">
-            <div class="tile">
+            <div class="tile" data-tech="Figma" data-info="Figma is een ontwerptool voor het maken van interfaces en prototypes.">
                 <i class="fab fa-figma"></i>
                 <span>Figma</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="HTML" data-info="HTML is de standaard opmaaktal voor het maken van webpagina's.">
                 <i class="fab fa-html5"></i>
                 <span>HTML</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="CSS" data-info="CSS wordt gebruikt voor het stijlen en indelen van webpagina's.">
                 <i class="fab fa-css3-alt"></i>
                 <span>CSS</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="JavaScript" data-info="JavaScript is een programmeertaal voor dynamische en interactieve webapplicaties.">
                 <i class="fab fa-js"></i>
-                <span>Javascript</span>
+                <span>JavaScript</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="PHP" data-info="PHP is een server-side scriptingtaal ontworpen voor webontwikkeling.">
                 <i class="fab fa-php"></i>
                 <span>PHP</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="MySQL" data-info="MySQL is een relationeel databasesysteem.">
                 <i class="fas fa-database"></i>
                 <span>MySQL</span>
             </div>
-            <div class="tile">
+            <div class="tile" data-tech="React" data-info="React is een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces.">
                 <i class="fab fa-react"></i>
-                <span>React-Native</span>
+                <span>React</span>
             </div>
         </div>
+        <div id="popup" class="popup">
+            <h3 id="popup-tech"></h3>
+            <p id="popup-info"></p>
+            <p><strong></strong> <span id="popup-projects"></span></p>
+            <button id="popup-close">Sluiten</button>
+        </div>
     </section>
+    <script src="script.js"></script>
 
     <section id="about">
         <div class="container">
+            <br>
+            <br>
             <h2>Over Mij</h2>
             <p>Welkom bij mijn portfolio! Ik ben Andres Cochez, een student Digital Experience Design aan Thomas More Mechelen.</p>
             <br>
@@ -123,12 +234,15 @@
             <p>Mijn doel is om digitale ervaringen te creëren die een blijvende indruk achterlaten. 🚀</p>
             <br>
             <p>Neem gerust een kijkje in mijn projecten om meer te ontdekken over mijn werk.</p>
+            <br>
+            <br>
         </div>
     </section>
 
     <section id="portfolio">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Projecten</h2>
+            <br>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <a href="the-useless-web.html">
@@ -148,25 +262,12 @@
                         <p>Dynamic poster</p>
                     </a>
                 </div>
-                <div class="portfolio-item">
-                    <a href="css-zengarden.html">
-                        <img src="images/4.png" alt="Screenshot van project CSS Zengarden">
-                        <p>CSS Zengarden</p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="todo-applicatie.html">
-                        <img src="images/5.png" alt="Screenshot van project Todo Applicatie">
-                        <p>Todo applicatie</p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="memory-game.html">
-                        <img src="images/6.png" alt="Screenshot van project Memory Game">
-                        <p>Memory game</p>
-                    </a>
-                </div>
             </div>
+            <div class="call-to-action">
+                <a href="projecten.html" class="btn">Bekijk meer</a>
+            </div>
+            <br>
+            <br>
         </div>
     </section>
 
